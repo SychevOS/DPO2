@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Сброс стилей */
+/* ===== СБРОС СТИЛЕЙ ===== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,6 +34,7 @@ body {
     background-color: #f8f9fa;
 }
 
+/* ===== КОНТЕЙНЕР ===== */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -41,6 +42,7 @@ body {
     padding: 0 15px;
 }
 
+/* ===== ШАПКА ===== */
 .top-bar {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
@@ -84,6 +86,7 @@ body {
     font-size: 16px;
 }
 
+/* ===== НАВИГАЦИЯ ===== */
 .main-nav {
     background-color: white;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -138,6 +141,16 @@ body {
     width: 100%;
 }
 
+.nav__link.active {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.nav__link.active::after {
+    width: 100%;
+}
+
+/* ===== МЕДИЦИНСКИЙ БАННЕР ===== */
 .medical-banner {
     position: relative;
     height: 500px;
@@ -179,7 +192,6 @@ body {
 
 .banner-text-wrapper {
     max-width: 800px;
-    padding: 20px;
 }
 
 .banner-title h1 {
@@ -221,53 +233,42 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+/* ===== АНИМАЦИИ ===== */
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(76, 209, 55, 0.7);
-    }
-    70% {
-        transform: scale(1.05);
-        box-shadow: 0 0 0 10px rgba(76, 209, 55, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(76, 209, 55, 0);
-    }
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 209, 55, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(76, 209, 55, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 209, 55, 0); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+@keyframes pinPulse {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pinRipple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
 }
 
 .fade-in {
@@ -290,6 +291,7 @@ body {
     opacity: 0;
 }
 
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
 main {
     background-color: #edf0f5;
     padding: 40px 0;
@@ -332,17 +334,18 @@ main {
     margin: 20px 0;
 }
 
-.about-section {
-    background-color: #ffffff;
-    padding: 60px 0;
-}
-
 .section-subtitle {
     font-size: 18px;
     color: #666;
     max-width: 600px;
     margin: 10px auto 40px;
     line-height: 1.6;
+}
+
+/* ===== СЕКЦИЯ "О НАС" ===== */
+.about-section {
+    background-color: #ffffff;
+    padding: 60px 0;
 }
 
 .about-modern {
@@ -353,36 +356,6 @@ main {
 .about-hero {
     text-align: center;
     margin-bottom: 50px;
-}
-
-.about-logo-modern {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.about-logo-modern-img {
-    height: 100px;
-    width: auto;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 5px 15px rgba(52, 152, 219, 0.2));
-}
-
-.logo-text h3 {
-    font-size: 32px;
-    color: #2c3e50;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.logo-text h3 span {
-    color: #3498db;
-}
-
-.logo-text p {
-    color: #666;
-    font-size: 16px;
 }
 
 .about-intro {
@@ -524,646 +497,7 @@ main {
     font-style: italic;
 }
 
-.why-us-section {
-    background-color: #f8f9fa;
-}
-
-.cards1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.card {
-    display: grid;
-    padding: 30px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    justify-items: center;
-    background: white;
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%;
-}
-
-.card--featured {
-    background: #ffffff;
-    border-color: #3498db;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.2);
-}
-
-.card img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 25px;
-    object-fit: contain;
-}
-
-.card__text {
-    color: #666;
-    line-height: 1.7;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-.doctors-section {
-    background-color: #ffffff;
-}
-
-.doctors-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.doctor-card {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 40px;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 0;
-}
-
-.doctor-photo {
-    height: 350px;
-}
-
-.doctor-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.doctor-info {
-    padding: 40px 30px 40px 0;
-}
-
-.doctor-info h3 {
-    font-size: 28px;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.doctor-specialty {
-    font-size: 18px;
-    color: #3498db;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.doctor-experience {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #eee;
-}
-
-.doctor-description {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #555;
-}
-
-.map-section {
-    background-color: #f8f9fa;
-}
-
-.map-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.map-info {
-    padding: 40px;
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-}
-
-.map-info h3 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.map-info p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.map-info i {
-    width: 24px;
-    text-align: center;
-    color: #4cd137;
-}
-
-.contacts-bottom {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.contacts-bottom h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.contacts-bottom p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-
-.map-placeholder {
-    height: 400px;
-}
-
-.map-image {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-}
-
-.map-text {
-    text-align: center;
-}
-
-.map-text i {
-    font-size: 48px;
-    color: #3498db;
-    margin-bottom: 15px;
-}
-
-.map-text p {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.map-text small {
-    font-size: 14px;
-    color: #888;
-}
-
-.footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-    color: white;
-    padding: 50px 0 20px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.footer-logo-img {
-    height: 80px;
-    width: auto;
-    margin-bottom: 15px;
-    filter: brightness(0) invert(1);
-}
-
-.footer-logo p {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.footer-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 40px;
-}
-
-.footer-contacts h3,
-.footer-nav h3 {
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: #4cd137;
-}
-
-.footer-contacts p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-contacts i {
-    width: 20px;
-    color: #3498db;
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-nav li {
-    margin-bottom: 12px;
-}
-
-.footer-nav a {
-    color: #bdc3c7;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-    color: white;
-    padding-left: 5px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 14px;
-    color: #95a5a6;
-}
-
-.footer-bottom p {
-    margin-bottom: 10px;
-}
-
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1199px) {
-    .cards1 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .medical-banner {
-        height: 450px;
-    }
-    
-    .doctor-card {
-        grid-template-columns: 250px 1fr;
-    }
-    
-    .about-columns {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 991px) {
-    .top-bar-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .logo-img {
-        height: 45px;
-    }
-    
-    .top-contacts {
-        justify-content: center;
-    }
-    
-    .nav__list {
-        gap: 30px;
-    }
-    
-    .cards1 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .medical-banner {
-        height: 400px;
-    }
-    
-    .banner-title h1,
-    .banner-highlight {
-        font-size: 42px;
-    }
-    
-    .banner-subtitle,
-    .banner-phone {
-        font-size: 26px;
-    }
-    
-    .banner-phone {
-        padding: 8px 25px;
-    }
-    
-    .section {
-        padding: 50px 0;
-    }
-    
-    .about-columns {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto 50px;
-    }
-    
-    .about-logo-modern-img {
-        height: 80px;
-    }
-    
-    .logo-text h3 {
-        font-size: 28px;
-    }
-    
-    .doctor-card {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    .doctor-photo {
-        height: 300px;
-    }
-    
-    .doctor-info {
-        padding: 30px;
-    }
-    
-    .map-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-info {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 767px) {
-    .top-contacts {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .nav__list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .nav__link {
-        font-size: 16px;
-    }
-    
-    .cards1 {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .medical-banner {
-        height: 350px;
-    }
-    
-    .banner-title h1,
-    .banner-highlight {
-        font-size: 36px;
-    }
-    
-    .banner-subtitle,
-    .banner-phone {
-        font-size: 22px;
-    }
-    
-    .banner-phone {
-        padding: 6px 20px;
-        font-size: 20px;
-    }
-    
-    .section {
-        padding: 40px 0;
-    }
-    
-    .topic h2 {
-        font-size: 30px;
-    }
-    
-    .about-hero {
-        margin-bottom: 40px;
-    }
-    
-    .about-logo-modern {
-        margin-bottom: 25px;
-    }
-    
-    .about-logo-modern-img {
-        height: 70px;
-    }
-    
-    .logo-text h3 {
-        font-size: 24px;
-    }
-    
-    .intro-text {
-        padding: 20px;
-        font-size: 16px;
-    }
-    
-    .about-column {
-        padding: 25px;
-    }
-    
-    .column-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-    .about-column h4 {
-        font-size: 18px;
-    }
-    
-    .about-mission {
-        padding: 30px;
-    }
-    
-    .mission-content h3 {
-        font-size: 24px;
-    }
-    
-    .mission-text {
-        font-size: 16px;
-    }
-    
-    .mission-quote {
-        padding: 12px 20px;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    
-    .doctor-info h3 {
-        font-size: 24px;
-    }
-    
-    .doctor-specialty {
-        font-size: 16px;
-    }
-    
-    .map-info {
-        padding: 30px;
-    }
-    
-    .map-placeholder {
-        height: 300px;
-    }
-}
-
-@media (max-width: 575px) {
-    .logo-img {
-        height: 40px;
-    }
-    
-    .contact-text {
-        font-size: 13px;
-    }
-    
-    .medical-banner {
-        height: 300px;
-    }
-    
-    .banner-title h1,
-    .banner-highlight {
-        font-size: 30px;
-    }
-    
-    .banner-subtitle,
-    .banner-phone {
-        font-size: 18px;
-    }
-    
-    .banner-phone {
-        padding: 5px 15px;
-        font-size: 18px;
-    }
-    
-    .card {
-        padding: 25px;
-    }
-    
-    .card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 20px;
-    }
-    
-    .about-columns {
-        gap: 20px;
-    }
-    
-    .about-column {
-        padding: 20px;
-    }
-    
-    .doctor-photo {
-        height: 250px;
-    }
-    
-    .doctor-info {
-        padding: 25px;
-    }
-    
-    .map-info h3 {
-        font-size: 20px;
-    }
-    
-    .map-info p {
-        font-size: 14px;
-    }
-    
-    .footer-logo-img {
-        height: 60px;
-    }
-    
-    .footer-contacts p,
-    .footer-nav a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 399px) {
-    .logo-img {
-        height: 35px;
-    }
-    
-    .top-bar {
-        padding: 10px 0;
-    }
-    
-    .nav__list {
-        gap: 15px;
-    }
-    
-    .nav__link {
-        font-size: 15px;
-    }
-    
-    .medical-banner {
-        height: 280px;
-    }
-    
-    .banner-title h1,
-    .banner-highlight {
-        font-size: 26px;
-    }
-    
-    .banner-subtitle {
-        font-size: 16px;
-    }
-    
-    .banner-phone {
-        font-size: 16px;
-        padding: 4px 12px;
-    }
-    
-    .doctor-card {
-        max-width: 100%;
-    }
-    
-    .footer-info {
-        gap: 30px;
-    }
-    
-    .logo-text h3 {
-        font-size: 22px;
-    }
-    
-    .section-subtitle {
-        font-size: 16px;
-    }
-}
-
+/* ===== СЕКЦИЯ "ПОЧЕМУ МЫ?" ===== */
 .why-us-section {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     padding: 80px 0;
@@ -1186,11 +520,6 @@ main {
         #3498db 100%);
     background-size: 200% 100%;
     animation: gradientMove 3s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 200% 0%; }
 }
 
 .reasons-grid {
@@ -1326,104 +655,7 @@ main {
     transform: translateY(-2px);
 }
 
-@media (max-width: 1199px) {
-    .reasons-grid {
-        gap: 25px;
-    }
-    
-    .reason-card {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 991px) {
-    .why-us-section {
-        padding: 60px 0;
-    }
-    
-    .reasons-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .reason-number {
-        font-size: 60px;
-    }
-    
-    .reason-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 767px) {
-    .why-us-section {
-        padding: 50px 0;
-    }
-    
-    .reason-card {
-        padding: 25px;
-    }
-    
-    .reason-content h3 {
-        font-size: 20px;
-    }
-    
-    .reason-description {
-        font-size: 15px;
-    }
-    
-    .reason-details p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 575px) {
-    .why-us-section {
-        padding: 40px 0;
-    }
-    
-    .reason-card {
-        padding: 20px;
-    }
-    
-    .reason-number {
-        font-size: 50px;
-        top: -15px;
-    }
-    
-    .reason-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-    
-    .reason-footer {
-        gap: 8px;
-    }
-    
-    .reason-tag {
-        padding: 5px 12px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 399px) {
-    .reason-card {
-        padding: 18px;
-    }
-    
-    .reason-content h3 {
-        font-size: 18px;
-    }
-    
-    .reason-description {
-        font-size: 14px;
-    }
-}
-
+/* ===== СЕКЦИЯ "НАШИ ВРАЧИ" ===== */
 .doctors-section {
     background: #ffffff;
     padding: 80px 0;
@@ -1559,126 +791,7 @@ main {
     transform: translateY(-2px);
 }
 
-@media (max-width: 1199px) {
-    .doctors-grid {
-        gap: 25px;
-    }
-    
-    .doctor-image {
-        height: 180px;
-    }
-    
-    .doctor-image img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 991px) {
-    .doctors-section {
-        padding: 60px 0;
-    }
-    
-    .doctors-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-    .doctor-card {
-        display: flex;
-        min-height: 180px;
-    }
-    
-    .doctor-image {
-        width: 180px;
-        height: auto;
-        flex-shrink: 0;
-    }
-    
-    .doctor-image img {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-@media (max-width: 767px) {
-    .doctors-section {
-        padding: 50px 0;
-    }
-    
-    .doctor-card {
-        flex-direction: column;
-    }
-    
-    .doctor-image {
-        width: 100%;
-        height: 180px;
-    }
-    
-    .doctor-info {
-        padding: 20px;
-    }
-    
-    .doctor-header h3 {
-        font-size: 20px;
-    }
-    
-    .doctor-description p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 575px) {
-    .doctors-section {
-        padding: 40px 0;
-    }
-    
-    .doctor-image {
-        height: 160px;
-        padding: 20px;
-    }
-    
-    .doctor-image img {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .doctor-tags {
-        gap: 6px;
-    }
-    
-    .doctor-tags span {
-        padding: 4px 10px;
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 399px) {
-    .doctor-card {
-        margin: 0 -15px;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    }
-    
-    .doctor-image {
-        height: 140px;
-    }
-    
-    .doctor-image img {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .doctor-header {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-    }
-}
-
+/* ===== СЕКЦИЯ "МЫ НА КАРТЕ" ===== */
 .map-section {
     background: #ffffff;
     padding: 80px 0 40px;
@@ -1745,26 +858,6 @@ main {
     background: inherit;
     z-index: -1;
     animation: pinRipple 2s infinite;
-}
-
-@keyframes pinPulse {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-@keyframes pinRipple {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2);
-        opacity: 0;
-    }
 }
 
 .pin-label {
@@ -1850,15 +943,533 @@ main {
     margin: 5px 0;
 }
 
+/* ===== СТРАНИЦА КОНТАКТОВ ===== */
+.contact-page {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-form {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+}
+
+.contact-info i {
+    color: #4cd137;
+    width: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item p {
+    margin: 0;
+    color: white;
+}
+
+.working-hours {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.working-hours h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.working-hours p {
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.map-mini {
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 150px;
+}
+
+.map-mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== СТРАНИЦА FAQ ===== */
+.faq-page {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 25px;
+    background: white;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    background: rgba(52, 152, 219, 0.05);
+}
+
+.accordion-button.active {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.accordion-button i {
+    transition: transform 0.3s ease;
+    color: #3498db;
+}
+
+.accordion-button.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+    padding: 0 25px;
+}
+
+.accordion-content.show {
+    max-height: 300px;
+    padding: 0 25px 25px 25px;
+}
+
+.accordion-content p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.faq-category {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.faq-category h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.faq-category p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.faq-contact-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s;
+}
+
+.faq-contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* ===== СТРАНИЦА 404 ===== */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px 0;
+}
+
+.error-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.error-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #4cd137, #e74c3c, #3498db);
+    background-size: 300% 100%;
+    animation: gradientMove 3s ease infinite;
+}
+
+.error-number {
+    font-size: 180px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 10px 10px 20px rgba(52, 152, 219, 0.2);
+    animation: pulse 2s ease infinite;
+}
+
+.error-title {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.error-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.error-btn-primary {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.error-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+
+.error-btn-secondary {
+    background: white;
+    color: #2c3e50;
+    border: 2px solid #3498db;
+}
+
+.error-btn-secondary:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.error-nav {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.error-nav h4 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.error-nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error-nav-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.error-nav-links a:hover {
+    color: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.error-medical-icon {
+    margin-bottom: 20px;
+}
+
+.error-medical-icon i {
+    font-size: 60px;
+    color: #3498db;
+    opacity: 0.3;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-contacts h3,
+.footer-nav h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #4cd137;
+}
+
+.footer-contacts p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contacts i {
+    width: 20px;
+    color: #3498db;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin-bottom: 12px;
+}
+
+.footer-nav a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 1199px) {
+    .medical-banner {
+        height: 450px;
+    }
+    
+    .about-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .reasons-grid {
+        gap: 25px;
+    }
+    
+    .doctors-grid {
+        gap: 25px;
+    }
+    
+    .doctor-image {
+        height: 180px;
+    }
+    
+    .doctor-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
     .map-image-container {
         height: 450px;
     }
 }
 
 @media (max-width: 991px) {
-    .map-section {
-        padding: 60px 0 30px;
+    .top-bar-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo-img {
+        height: 45px;
+    }
+    
+    .top-contacts {
+        justify-content: center;
+    }
+    
+    .nav__list {
+        gap: 30px;
+    }
+    
+    .medical-banner {
+        height: 400px;
+    }
+    
+    .banner-title h1,
+    .banner-highlight {
+        font-size: 42px;
+    }
+    
+    .banner-subtitle,
+    .banner-phone {
+        font-size: 26px;
+    }
+    
+    .banner-phone {
+        padding: 8px 25px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .about-columns {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 50px;
+    }
+    
+    .reasons-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .reason-number {
+        font-size: 60px;
+    }
+    
+    .reason-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .doctor-card {
+        display: flex;
+        min-height: 180px;
+    }
+    
+    .doctor-image {
+        width: 180px;
+        height: auto;
+        flex-shrink: 0;
+    }
+    
+    .doctor-image img {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .footer-info {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
     
     .map-image-container {
@@ -1886,6 +1497,136 @@ main {
 }
 
 @media (max-width: 767px) {
+    .top-contacts {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .nav__link {
+        font-size: 16px;
+    }
+    
+    .medical-banner {
+        height: 350px;
+    }
+    
+    .banner-title h1,
+    .banner-highlight {
+        font-size: 36px;
+    }
+    
+    .banner-subtitle,
+    .banner-phone {
+        font-size: 22px;
+    }
+    
+    .banner-phone {
+        padding: 6px 20px;
+        font-size: 20px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .topic h2 {
+        font-size: 30px;
+    }
+    
+    .about-hero {
+        margin-bottom: 40px;
+    }
+    
+    .intro-text {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .about-column {
+        padding: 25px;
+    }
+    
+    .column-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .about-column h4 {
+        font-size: 18px;
+    }
+    
+    .about-mission {
+        padding: 30px;
+    }
+    
+    .mission-content h3 {
+        font-size: 24px;
+    }
+    
+    .mission-text {
+        font-size: 16px;
+    }
+    
+    .mission-quote {
+        padding: 12px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .why-us-section {
+        padding: 50px 0;
+    }
+    
+    .reason-card {
+        padding: 25px;
+    }
+    
+    .reason-content h3 {
+        font-size: 20px;
+    }
+    
+    .reason-description {
+        font-size: 15px;
+    }
+    
+    .reason-details p {
+        font-size: 14px;
+    }
+    
+    .doctors-section {
+        padding: 50px 0;
+    }
+    
+    .doctor-card {
+        flex-direction: column;
+    }
+    
+    .doctor-image {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .doctor-info {
+        padding: 20px;
+    }
+    
+    .doctor-header h3 {
+        font-size: 20px;
+    }
+    
+    .doctor-description p {
+        font-size: 14px;
+    }
+    
     .map-section {
         padding: 50px 0 20px;
     }
@@ -1905,9 +1646,139 @@ main {
         height: 45px;
         font-size: 18px;
     }
+    
+    .accordion-button {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .accordion-content.show {
+        padding: 0 20px 20px 20px;
+    }
+    
+    .faq-category {
+        padding: 25px;
+    }
+    
+    .faq-category h3 {
+        font-size: 22px;
+    }
+    
+    .faq-contact-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .error-number {
+        font-size: 120px;
+    }
+    
+    .error-title {
+        font-size: 24px;
+    }
+    
+    .error-text {
+        font-size: 16px;
+    }
+    
+    .error-container {
+        padding: 40px 20px;
+        margin: 0 15px;
+    }
+    
+    .error-btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 575px) {
+    .logo-img {
+        height: 40px;
+    }
+    
+    .contact-text {
+        font-size: 13px;
+    }
+    
+    .medical-banner {
+        height: 300px;
+    }
+    
+    .banner-title h1,
+    .banner-highlight {
+        font-size: 30px;
+    }
+    
+    .banner-subtitle,
+    .banner-phone {
+        font-size: 18px;
+    }
+    
+    .banner-phone {
+        padding: 5px 15px;
+        font-size: 18px;
+    }
+    
+    .about-columns {
+        gap: 20px;
+    }
+    
+    .about-column {
+        padding: 20px;
+    }
+    
+    .why-us-section {
+        padding: 40px 0;
+    }
+    
+    .reason-card {
+        padding: 20px;
+    }
+    
+    .reason-number {
+        font-size: 50px;
+        top: -15px;
+    }
+    
+    .reason-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .reason-footer {
+        gap: 8px;
+    }
+    
+    .reason-tag {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    
+    .doctors-section {
+        padding: 40px 0;
+    }
+    
+    .doctor-image {
+        height: 160px;
+        padding: 20px;
+    }
+    
+    .doctor-image img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .doctor-tags {
+        gap: 6px;
+    }
+    
+    .doctor-tags span {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+    
     .map-section {
         padding: 40px 0 20px;
     }
@@ -1950,6 +1821,87 @@ main {
 }
 
 @media (max-width: 399px) {
+    .logo-img {
+        height: 35px;
+    }
+    
+    .top-bar {
+        padding: 10px 0;
+    }
+    
+    .nav__list {
+        gap: 15px;
+    }
+    
+    .nav__link {
+        font-size: 15px;
+    }
+    
+    .medical-banner {
+        height: 280px;
+    }
+    
+    .banner-title h1,
+    .banner-highlight {
+        font-size: 26px;
+    }
+    
+    .banner-subtitle {
+        font-size: 16px;
+    }
+    
+    .banner-phone {
+        font-size: 16px;
+        padding: 4px 12px;
+    }
+    
+    .doctor-card {
+        max-width: 100%;
+    }
+    
+    .footer-info {
+        gap: 30px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .reason-card {
+        padding: 18px;
+    }
+    
+    .reason-content h3 {
+        font-size: 18px;
+    }
+    
+    .reason-description {
+        font-size: 14px;
+    }
+    
+    .doctor-card {
+        margin: 0 -15px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .doctor-image {
+        height: 140px;
+    }
+    
+    .doctor-image img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .doctor-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
     .map-image-container {
         height: 250px;
     }
@@ -1958,5 +1910,18 @@ main {
         width: 35px;
         height: 35px;
         font-size: 14px;
+    }
+    
+    .error-number {
+        font-size: 100px;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+    }
+    
+    .error-btn {
+        width: 100%;
+        justify-content: center;
     }
 }

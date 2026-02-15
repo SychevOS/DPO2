@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Медцентр Здоровье</title>
+    <link rel="icon" href="assets/icons/medical-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="logo">
+                        <img src="LOGO.png" alt="Медцентр Здоровье" class="logo-img">
+                    </div>
+                    <div class="top-contacts">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="contact-text">+7 (901) 563-10-07</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="far fa-clock"></i>
+                            <span class="contact-text">Пн-Пт: 8:00-20:00</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-text">г. Москва, ул. Медицинская, 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="index.html#section1">О нас</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section2">Почему мы?</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section3">Наши врачи</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section4">Мы на карте</a></li>
+                        <li class="nav__item"><a class="nav__link" href="faq.html">FAQ</a></li>
+                        <li class="nav__item"><a class="nav__link active" href="contacts.html">Напишите нам</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-page">
+            <div class="container">
+                <div class="topic">
+                    <h2>Свяжитесь с нами</h2>
+                    <p class="section-subtitle">Мы всегда рады ответить на ваши вопросы</p>
+                </div>
+                
+                <div class="columns is-desktop">
+                    <div class="column is-half">
+                        <div class="contact-form">
+                            <h3 class="title is-4 mb-4">Напишите нам</h3>
+                            
+                            <form id="feedbackForm">
+                                <div class="field">
+                                    <label class="label">Имя <span style="color: #e74c3c;">*</span></label>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Введите ваше имя" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="field">
+                                    <label class="label">Email <span style="color: #e74c3c;">*</span></label>
+                                    <div class="control">
+                                        <input class="input" type="email" placeholder="example@email.com" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="field">
+                                    <label class="label">Тема обращения <span style="color: #e74c3c;">*</span></label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select required>
+                                                <option value="" disabled selected>Выберите тему</option>
+                                                <option>Запись на приём</option>
+                                                <option>Вопрос о услугах</option>
+                                                <option>Жалоба или предложение</option>
+                                                <option>Сотрудничество</option>
+                                                <option>Другое</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="field">
+                                    <label class="label">Сообщение <span style="color: #e74c3c;">*</span></label>
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" required>
+                                            Я соглашаюсь на <a href="#" style="color: #3498db;">обработку персональных данных</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary is-large" type="submit" style="width: 100%;">
+                                            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                            <span>Отправить сообщение</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <p class="help" style="text-align: center; margin-top: 20px;">
+                                    <span style="color: #e74c3c;">*</span> — обязательные поля
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="column is-half">
+                        <div class="contact-info">
+                            <h3 class="title is-4 has-text-white mb-5">Контактная информация</h3>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt fa-lg"></i>
+                                <div>
+                                    <p><strong>Адрес клиники:</strong></p>
+                                    <p>г. Москва, ул. Медицинская, 15</p>
+                                    <p style="font-size: 14px; opacity: 0.8;">м. Медицинская, выход №2</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-phone-alt fa-lg"></i>
+                                <div>
+                                    <p><strong>Телефон для записи:</strong></p>
+                                    <p>+7 (901) 563-10-07</p>
+                                    <p style="font-size: 14px; opacity: 0.8;">(ежедневно с 8:00 до 20:00)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <i class="fas fa-envelope fa-lg"></i>
+                                <div>
+                                    <p><strong>Электронная почта:</strong></p>
+                                    <p>info@medcentr.ru</p>
+                                    <p style="font-size: 14px; opacity: 0.8;">support@medcentr.ru</p>
+                                </div>
+                            </div>
+                            
+                            <div class="working-hours">
+                                <h4><i class="far fa-clock"></i> Режим работы</h4>
+                                <p><strong>Будни:</strong> Пн-Пт: 8:00 - 20:00</p>
+                                <p><strong>Выходные:</strong> Сб-Вс: 9:00 - 18:00</p>
+                                <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">
+                                    <i class="fas fa-info-circle"></i> Без перерывов и выходных
+                                </p>
+                            </div>
+                            
+                            <div class="map-mini">
+                                <img src="map.png" alt="Карта проезда">
+                            </div>
+                            
+                            <div style="margin-top: 30px;">
+                                <p style="margin-bottom: 15px;"><strong>Мы в соцсетях:</strong></p>
+                                <div style="display: flex; gap: 15px;">
+                                    <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-vk"></i></a>
+                                    <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-telegram"></i></a>
+                                    <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#" style="color: white; font-size: 24px;"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 60px; background: white; border-radius: 20px; padding: 40px;">
+                    <h3 class="title is-4 mb-4">Как добраться до клиники</h3>
+                    <div class="columns">
+                        <div class="column">
+                            <p><i class="fas fa-subway" style="color: #3498db; margin-right: 10px;"></i> <strong>На метро:</strong> Станция "Медицинская", выход №2. Далее пешком 5 минут.</p>
+                        </div>
+                        <div class="column">
+                            <p><i class="fas fa-bus" style="color: #3498db; margin-right: 10px;"></i> <strong>Автобусы:</strong> №15, 27, 42 до остановки "Медицинский центр".</p>
+                        </div>
+                        <div class="column">
+                            <p><i class="fas fa-car" style="color: #3498db; margin-right: 10px;"></i> <strong>Парковка:</strong> Бесплатная парковка для пациентов на 30 минут.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">            
+                <div class="footer-info">
+                    <div class="footer-contacts">
+                        <h3>Контакты</h3>
+                        <p><i class="fas fa-phone"></i> +7 (901) 563-10-07</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Медицинская, 15</p>
+                        <p><i class="far fa-clock"></i> Пн-Пт: 8:00-20:00</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li><a href="index.html#section1">О нас</a></li>
+                            <li><a href="index.html#section2">Почему мы?</a></li>
+                            <li><a href="index.html#section3">Наши врачи</a></li>
+                            <li><a href="index.html#section4">Мы на карте</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contacts.html">Напишите нам</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 Медцентр Здоровье. Все права защищены.</p>
+                    <p>Лицензия на медицинскую деятельность: ЛО-77-01-012345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за обращение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Медцентр Здоровье</title>
+    <link rel="icon" href="assets/icons/medical-icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="logo">
+                        <img src="LOGO.png" alt="Медцентр Здоровье" class="logo-img">
+                    </div>
+                    <div class="top-contacts">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="contact-text">+7 (901) 563-10-07</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="far fa-clock"></i>
+                            <span class="contact-text">Пн-Пт: 8:00-20:00</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-text">г. Москва, ул. Медицинская, 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" href="index.html#section1">О нас</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section2">Почему мы?</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section3">Наши врачи</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#section4">Мы на карте</a></li>
+                        <li class="nav__item"><a class="nav__link active" href="faq.html">FAQ</a></li>
+                        <li class="nav__item"><a class="nav__link" href="contacts.html">Напишите нам</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-page">
+            <div class="container">
+                <div class="topic">
+                    <h2>Часто задаваемые вопросы</h2>
+                    <p class="section-subtitle">Ответы на самые популярные вопросы о нашей клинике</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="accordion" id="faqAccordion">
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button active" onclick="toggleAccordion(this)">
+                                    <span>Как записаться на приём?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content show">
+                                <p>
+                                    Записаться на приём можно несколькими способами:
+                                    <br>• По телефону: <strong>+7 (901) 563-10-07</strong>
+                                    <br>• Через форму на странице <a href="contacts.html" style="color: #3498db;">"Напишите нам"</a>
+                                    <br>• Лично в регистратуре клиники
+                                    <br><br>Мы рекомендуем записываться заранее, чтобы выбрать удобное для вас время.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Какие документы нужны для первого визита?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Для первого визита необходимо иметь при себе:
+                                    <br>• Паспорт
+                                    <br>• Полис ОМС (для граждан РФ)
+                                    <br>• Результаты предыдущих обследований (если есть)
+                                    <br>• Направление от врача (если есть)
+                                    <br><br>Для детей до 18 лет обязательно присутствие родителя или законного представителя.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Принимаете ли вы по полису ОМС?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Да, мы работаем по полису ОМС. Вы можете получить бесплатную медицинскую помощь по следующим направлениям:
+                                    <br>• Первичный приём терапевта
+                                    <br>• Консультации узких специалистов (по направлению)
+                                    <br>• Отдельные виды диагностики
+                                    <br><br>Для уточнения перечня услуг по ОМС позвоните нам или уточните в регистратуре.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Как отменить или перенести запись?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Вы можете отменить или перенести запись:
+                                    <br>• По телефону <strong>+7 (901) 563-10-07</strong> (не позднее чем за 2 часа до приёма)
+                                    <br>• Через форму обратной связи на сайте
+                                    <br>• Лично в регистратуре клиники
+                                    <br><br>Пожалуйста, предупреждайте об отмене заранее — это позволит нам принять других пациентов.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Есть ли у вас детский врач?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Да, в нашей клинике ведёт приём опытный врач-педиатр. Мы принимаем детей с рождения до 18 лет.
+                                    <br><br>Направления детского отделения:
+                                    <br>• Профилактические осмотры
+                                    <br>• Вакцинация (по календарю прививок)
+                                    <br>• Лечение детских заболеваний
+                                    <br>• Консультации по грудному вскармливанию
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Какие методы диагностики вы используете?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Наша клиника оснащена современным диагностическим оборудованием:
+                                    <br>• УЗИ (ультразвуковая диагностика)
+                                    <br>• ЭКГ (электрокардиография)
+                                    <br>• Лабораторные анализы (кровь, моча и др.)
+                                    <br>• Функциональная диагностика
+                                    <br>• Рентген (по направлению)
+                                    <br><br>Все исследования проводятся на новейшем оборудовании экспертного класса.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" onclick="toggleAccordion(this)">
+                                    <span>Работаете ли вы в выходные?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </h3>
+                            <div class="accordion-content">
+                                <p>
+                                    Да, мы работаем без выходных:
+                                    <br>• <strong>Будни:</strong> Пн-Пт с 8:00 до 20:00
+                                    <br>• <strong>Выходные:</strong> Сб-Вс с 9:00 до 18:00
+                                    <br><br>В выходные дни ведут приём дежурные врачи, доступны основные виды диагностики.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-category">
+                        <h3>Не нашли ответ на свой вопрос?</h3>
+                        <p>Свяжитесь с нами — мы с радостью поможем!</p>
+                        <a href="contacts.html" class="faq-contact-btn">
+                            <i class="fas fa-pen" style="margin-right: 10px;"></i>Напишите нам
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">            
+                <div class="footer-info">
+                    <div class="footer-contacts">
+                        <h3>Контакты</h3>
+                        <p><i class="fas fa-phone"></i> +7 (901) 563-10-07</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Медицинская, 15</p>
+                        <p><i class="far fa-clock"></i> Пн-Пт: 8:00-20:00</p>
+                    </div>
+                    
+                    <div class="footer-nav">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li><a href="index.html#section1">О нас</a></li>
+                            <li><a href="index.html#section2">Почему мы?</a></li>
+                            <li><a href="index.html#section3">Наши врачи</a></li>
+                            <li><a href="index.html#section4">Мы на карте</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contacts.html">Напишите нам</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 Медцентр Здоровье. Все права защищены.</p>
+                    <p>Лицензия на медицинскую деятельность: ЛО-77-01-012345</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleAccordion(button) {
+            const accordionItem = button.closest('.accordion-item');
+            const content = accordionItem.querySelector('.accordion-content');
+            const isActive = button.classList.contains('active');
+            const allButtons = document.querySelectorAll('.accordion-button');
+            const allContents = document.querySelectorAll('.accordion-content');
+            
+            allButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            allContents.forEach(c => {
+                c.classList.remove('show');
+            });
+            
+            if (!isActive) {
+                button.classList.add('active');
+                content.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
